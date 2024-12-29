@@ -13,7 +13,7 @@ app.set("view engine", "ejs");
 app.set(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-  res.render("Home")
+  res.render("Home.ejs")
 });
 
 server.listen(PORT, () => console.log("Server is listening on Port : ", PORT));
