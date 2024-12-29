@@ -10,10 +10,11 @@ const server = createServer(app);
 const io = socket(server);
 
 app.set("view engine", "ejs");
+app.set("views", path.resolve("./views"));
 app.set(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-  res.end("without home.ejs")
+  res.render("Home.ejs");
 });
 
 server.listen(PORT, () => console.log("Server is listening on Port : ", PORT));
