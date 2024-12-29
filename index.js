@@ -13,7 +13,9 @@ app.set("view engine", "ejs");
 app.set(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  res.render("Home")
 });
 
 server.listen(PORT, () => console.log("Server is listening on Port : ", PORT));
+
+//https://real-time-tracker-gamma-sage.vercel.app/
